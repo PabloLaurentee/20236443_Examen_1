@@ -1,0 +1,35 @@
+Parte A – Función de los bloques
+
+a. CPU 
+Es el cerebro de la computadora ya que se encarga de extraer, decodificar y ejecutar las instrucciones de los programas. Además de efectuar las operaciones matemáticas y lógicas necesarias. Al mismo tiempo, administra y sincroniza el trabajo de los demás componentes del sistema. 
+
+b. Memoria Flash 
+Almacena de forma permanente el programa (el código compilado).Al ser una memoria no volátil, la información permanece intacta incluso cuando se interrumpe la energía eléctrica.
+ 
+c. Memoria RAM 
+Almacena temporalmente los datos y variables que el programa utiliza mientras se ejecuta. Es volátil, es decir que al apagar el microcontrolador su contenido se pierde. 
+
+d. GPIO 
+Puertos de entrada/salida de propósito general (PORT B, C y D que se muestra en la figura). Esto permite leer señales digitales del exterior (pulsadores, sensores , mis entradas) y enviar señales digitales hacia afuera (LEDs, mis salidas). 
+
+e. ADC 
+Convertidor analógico-digital. Toma una señal analógica de voltaje continuo y la transforma en un valor digital que la CPU puede procesar. 
+
+f. UART 
+Módulo de comunicación serial asíncrona. Permite transmitir y recibir datos bit a bit con otros dispositivos, como una computadora. Esto también tiene relación con I2C
+
+g. Timers 
+Temporizadores/contadores (8-bit timer 0, 16-bit timer 1, 8-bit timer 2). Miden intervalos de tiempo, cuentan eventos y generan señales periódicas como el PWM, CTC u otros, sin ocupar a la CPU. 
+
+h. Clock 
+Circuito oscilador que genera la señal de reloj. Marca el ritmo de trabajo del microcontrolador lo que sincroniza la ejecución de instrucciones y define la velocidad de operación. 
+
+Parte B – Preguntas de comprensión
+
+a. La diferencia principal está en la volatilidad y en lo que guarda cada una. La memoria Flash es no volátil y almacena el programa de forma permanente, conservándolo al apagar el equipo; la memoria RAM es volátil y guarda las variables y datos temporales durante la ejecución pero pierde todo su contenido al cortarse la alimentación. Además la RAM es más rápida pero de menor capacidad.
+
+b. El ADC convierte una señal analógica de entrada (un voltaje que varía de forma continua) en un valor digital equivalente, para que la CPU pueda procesarlo. Es lo que permite al microcontrolador leer sensores como potenciómetros, LDR o sensores de temperatura.
+
+c. El bloque UART (USART 0). Convierte los datos en una trama serial que se transmite bit a bit por las líneas TX y RX, lo que permite la comunicación con una computadora, generalmente a través de un conversor USB-serial.
+
+d. Se utilizaría el bloque GPIO configurando el pin como salida digital. El encendido y apagado de un LED solo requiere dos estados (alto o bajo, 1 o 0) y eso es exactamente lo que entrega un pin digital de propósito general lo que no se necesita conversión analógica ni comunicación serial, basta con poner el pin en nivel alto para encender el LED y en bajo para apagarlo.
